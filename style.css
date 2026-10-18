@@ -22,13 +22,13 @@
     --card-dark: #13131a;
     --card-surface: rgba(24, 24, 33, 0.85);
     
-    --cream: #f7eee1;
-    --cream-muted: #c9bea9;
-    --cream-subtle: #8a8275;
+    --cream: #ffffff;
+    --cream-muted: #e2e8f0;
+    --cream-subtle: #cbd5e1;
     
-    --font-title: 'Aref Ruqaa', serif;
-    --font-body: 'Amiri', serif;
-    --font-display: 'Lateef', serif;
+    --font-title: 'Cairo', sans-serif;
+    --font-body: 'Tajawal', sans-serif;
+    --font-display: 'Cairo', sans-serif;
     
     --sat: env(safe-area-inset-top, 0px);
     --sab: env(safe-area-inset-bottom, 0px);
@@ -272,20 +272,20 @@ html, body {
 /* Swipe Hint */
 .swipe-hint {
     position: absolute;
-    top: 50%;
+    bottom: 65px;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    background: rgba(10, 10, 14, 0.92);
+    transform: translate3d(-50%, 0, 0);
+    background: rgba(10, 10, 14, 0.95);
     border: 1px solid var(--gold-border);
-    padding: 12px 24px;
+    padding: 8px 18px;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     z-index: 100;
     pointer-events: none;
-    transition: opacity 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: opacity 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
 }
 
 .swipe-hint.fade-out {
@@ -520,28 +520,30 @@ html, body {
 
 .title-main {
     font-family: var(--font-title);
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 38px;
+    font-weight: 900;
     color: var(--gold-bright);
-    letter-spacing: 1px;
-    line-height: 1.1;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
     text-shadow: 0 3px 15px rgba(212, 168, 83, 0.4);
 }
 
 .title-sub {
-    font-family: var(--font-display);
-    font-size: 24px;
-    color: var(--cream);
-    font-weight: normal;
-    line-height: 1.2;
+    font-family: var(--font-title);
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 4px;
 }
 
 .title-quote {
     font-size: 15px;
     color: var(--cream-muted);
-    line-height: 1.6;
-    margin: 4px 0;
-    font-style: italic;
+    line-height: 1.7;
+    margin: 6px 0;
+    font-family: var(--font-body);
+    font-weight: 500;
 }
 
 .title-author-box {
@@ -577,20 +579,22 @@ html, body {
 .prose-block {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     font-size: 15px;
-    line-height: 1.7;
-    color: var(--cream);
+    line-height: 1.75;
+    color: #ffffff;
     text-align: right;
     width: 100%;
+    font-weight: 500;
 }
 
 .highlight-line {
-    font-weight: bold;
+    font-weight: 700;
     color: var(--gold-bright);
     font-size: 16px;
     border-right: 3px solid var(--gold);
     padding-right: 8px;
+    line-height: 1.5;
 }
 
 .quote-card {
