@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#0a0a0a">
-    <title>شادية — حكاية حب ما إلها آخر</title>
-    <meta name="description" content="كتاب إهداء شخصي من قيس الجازي إلى شادية — حكاية حب ما إلها آخر">
+    <meta name="theme-color" content="#09090b">
+    <title>شادية — سِحر الحضور وكبرياء الجمال</title>
+    <meta name="description" content="إهداء خاص بجمال ودلال شادية — بقلم قيس الجازي">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Golden particles canvas -->
-    <canvas id="particlesCanvas"></canvas>
+    <!-- Background subtle ambient glow (Pure CSS, GPU accelerated, 0 CPU lag) -->
+    <div class="ambient-glow"></div>
 
     <!-- ==================== INTRO: GIFT UNWRAP ==================== -->
     <div id="introScreen" class="intro-screen">
-        <div class="intro-bg-glow"></div>
         <div class="gift-wrap" id="giftWrap">
             <div class="gift-box" id="giftBox">
                 <div class="ribbon ribbon-v"></div>
@@ -31,8 +30,9 @@
                 </div>
             </div>
             <div class="gift-tag">
-                <span class="tag-to">إلى شادية</span>
-                <span class="tag-from">من قيس الجازي ❤️</span>
+                <span class="tag-badge">إهداء خاص</span>
+                <span class="tag-to">إلى شادية... القطة الفاتنة 🐾</span>
+                <span class="tag-from">من: قيس الجازي ✨</span>
             </div>
         </div>
         <p class="intro-tap">اضغطي لفتح الهدية</p>
@@ -40,37 +40,55 @@
 
     <!-- ==================== BOOK CONTAINER ==================== -->
     <div id="bookContainer" class="book-container hidden">
-        <!-- Page counter -->
-        <div class="page-counter" id="pageCounter">
-            <span id="currentNum">1</span> / <span id="totalNum">6</span>
+        <!-- Header status bar -->
+        <div class="book-header">
+            <span class="header-tag">سِحر الجمال والدلال</span>
+            <div class="page-counter" id="pageCounter">
+                <span id="currentNum">1</span> / <span id="totalNum">6</span>
+            </div>
         </div>
 
         <!-- Swipe hint (shown once) -->
         <div class="swipe-hint" id="swipeHint">
-            <div class="swipe-hand">👆</div>
+            <div class="swipe-hand">👈</div>
             <p>اسحبي لتقليب الصفحات</p>
         </div>
 
-        <!-- Book -->
+        <!-- Book 3D Deck -->
         <div class="book" id="book">
 
             <!-- PAGE 1: COVER -->
             <div class="page" id="page-1">
-                <div class="page-front">
-                    <div class="cover-page">
-                        <img src="images/cover.jpg" alt="" class="cover-bg-img">
-                        <div class="cover-overlay"></div>
-                        <div class="cover-inner">
-                            <div class="ornament">✦</div>
-                            <div class="gold-line"></div>
+                <div class="page-front page-cover">
+                    <div class="page-frame">
+                        <div class="corner corner-tl"></div>
+                        <div class="corner corner-tr"></div>
+                        <div class="corner corner-bl"></div>
+                        <div class="corner corner-br"></div>
+                        
+                        <div class="cover-content">
+                            <div class="feline-crest">
+                                <span class="crown-icon">👑</span>
+                                <span class="crest-dot">✦</span>
+                            </div>
+                            <div class="gold-sep"></div>
+                            
                             <h1 class="title-main">شادية</h1>
-                            <h2 class="title-sub">حكاية حب ما إلها آخر</h2>
-                            <div class="gold-line"></div>
-                            <p class="title-ded">إلى شادية... المرأة التي جعلت<br>للحكايات معنى أجمل.</p>
-                            <div class="gold-line short"></div>
-                            <p class="title-author">قيس الجازي</p>
-                            <div class="ornament">✦</div>
-                            <div class="cover-heart">❤</div>
+                            <h2 class="title-sub">سِحر الحضور... وكبرياء الجمال</h2>
+                            
+                            <div class="gold-sep"></div>
+                            
+                            <p class="title-quote">
+                                «إلى القطة التي لا يشبه دلالها أحد،<br>
+                                وحضورها يفرض هيبته بهدوء وسحر.»
+                            </p>
+                            
+                            <div class="title-author-box">
+                                <span class="author-label">كلمات وتوقيع</span>
+                                <p class="title-author">قيس الجازي</p>
+                            </div>
+                            
+                            <div class="cover-bottom-orn">✦ 🐾 ✦</div>
                         </div>
                     </div>
                 </div>
@@ -79,22 +97,28 @@
                 </div>
             </div>
 
-            <!-- PAGE 2: DEDICATION -->
+            <!-- PAGE 2: FACIAL BEAUTY & CHARM -->
             <div class="page" id="page-2">
-                <div class="page-front">
-                    <div class="ded-page">
-                        <img src="images/dedication.jpg" alt="" class="ded-bg-img">
-                        <div class="ded-overlay"></div>
-                        <div class="ded-inner">
-                            <div class="ded-orn">❦</div>
-                            <h2 class="ded-heading">الإهداء</h2>
-                            <div class="ded-sep"></div>
-                            <p class="ded-opening">إلى شادية، حبيبتي ورفيقة أيامي...</p>
-                            <p class="ded-body">يمكن ما أقدر أعبّر بالكلام عن كل اللي بقلبي إلك، عشان هيك قررت أجمع جزء من مشاعري بين صفحات كتاب، كل صفحة فيه بتحمل كلمة حب، وكل كلمة بتحكي عن شعور ما إله وصف.</p>
-                            <p class="ded-body">هذا الكتاب إلك، وكل حرف فيه إهداء من قلبي لقلبك.</p>
-                            <div class="ded-sep"></div>
-                            <p class="ded-closing"><strong>من قيس الجازي، إلى شادية... حكاية حب بتمنى تضل أجمل فصولها لسه ما انكتبت.</strong> <span class="pulse-heart">❤️</span></p>
-                            <div class="ded-orn">❦</div>
+                <div class="page-front page-charm">
+                    <div class="page-frame">
+                        <div class="page-inner">
+                            <div class="page-badge">سحر الملامح</div>
+                            <h2 class="page-title">جمالٌ لا يقبل المقارنة</h2>
+                            <div class="gold-divider"></div>
+                            
+                            <div class="prose-block">
+                                <p class="highlight-line">يقولون إن الجمال هبة... لكن جمالكِ أنتِ حالة استثنائية.</p>
+                                <p>ملامح هادية وفاتنة، ونظرة واثقة، ودلال قطة تعرف تماماً مقدار سحرها وقيمتها في كل نظرة وحركة.</p>
+                                <p>مش بحاجة لأي تصنّع أو كلام لتثبتي حضورك؛ خطوة واحدة منكِ بتلفت كل الأنظار، وعيونكِ بتحكي قصص جاذبية ما بيقدر عليها أي وصف.</p>
+                            </div>
+                            
+                            <div class="quote-card">
+                                <p>«حضوركِ يفرض هيبته بهدوء، كأن المكان خُلق ليتأمّل حسنكِ فقط.»</p>
+                            </div>
+                            
+                            <div class="author-sign">
+                                <span>— قيس الجازي</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -103,26 +127,39 @@
                 </div>
             </div>
 
-            <!-- PAGE 3: LETTER -->
+            <!-- PAGE 3: QUALITIES & FELINE POISE -->
             <div class="page" id="page-3">
-                <div class="page-front">
-                    <div class="letter-page">
-                        <div class="letter-inner">
-                            <div class="letter-head">
-                                <span class="letter-line-dec"></span>
-                                <span class="letter-rose">🌹</span>
-                                <span class="letter-line-dec"></span>
+                <div class="page-front page-qualities">
+                    <div class="page-frame">
+                        <div class="page-inner">
+                            <div class="page-badge">فتنة الدلال</div>
+                            <h2 class="page-title">أسرار الجاذبية</h2>
+                            <div class="gold-divider"></div>
+                            
+                            <div class="cards-grid">
+                                <div class="glamour-card">
+                                    <div class="card-icon">👁️</div>
+                                    <h3>عيون القطة</h3>
+                                    <p>نظرة ساحرة فيها ذكاء وغموض، بتعرف كيف تخطف الانتباه بثانية وحدة وبثقة مطلقة.</p>
+                                </div>
+                                <div class="glamour-card">
+                                    <div class="card-icon">👑</div>
+                                    <h3>كبرياء راقي</h3>
+                                    <p>مش أي حدا بيقدر يوصل لمكانتك؛ حضورك عالي وراقي وما بتتنازلي عن هيبتك أبداً.</p>
+                                </div>
+                                <div class="glamour-card">
+                                    <div class="card-icon">✨</div>
+                                    <h3>ابتسامة نادرة</h3>
+                                    <p>ابتسامة محسوبة بالملّي، هادية وفاتنة، بتنوّر المكان وتترك أثر مستحيل يُنسى.</p>
+                                </div>
+                                <div class="glamour-card">
+                                    <div class="card-icon">🐾</div>
+                                    <h3>دلال وعفوية</h3>
+                                    <p>هدوء طاغي وثقة نادرة، مثل قطة ملكية بتعرف إن كل الأضواء موجهة إلها دون مجهود.</p>
+                                </div>
                             </div>
-                            <h2 class="letter-title">رسالة من القلب</h2>
-                            <div class="letter-body">
-                                <p>يا شادية...</p>
-                                <p>كل يوم بمر عليّ بتأكد إنك أحلى قرار أخذته بحياتي</p>
-                                <p>ابتسامتك بتنوّر عتمة أيامي</p>
-                                <p>وصوتك بيهدّي كل عاصفة بقلبي</p>
-                                <p>إنتِ مش بس حب...</p>
-                                <p>إنتِ الأمان والبيت والحكاية كلها</p>
-                            </div>
-                            <p class="letter-sig">— قيس الجازي</p>
+                            
+                            <div class="author-sign-mini">قيس الجازي ✦</div>
                         </div>
                     </div>
                 </div>
@@ -131,43 +168,29 @@
                 </div>
             </div>
 
-            <!-- PAGE 4: QUALITIES -->
+            <!-- PAGE 4: AURA & ADMIRATION -->
             <div class="page" id="page-4">
-                <div class="page-front">
-                    <div class="qual-page">
-                        <div class="qual-inner">
-                            <h2 class="qual-title">لماذا أنتِ مميزة<br>يا شادية</h2>
-                            <div class="qual-grid">
-                                <div class="qual-card">
-                                    <span class="qual-ico">💖</span>
-                                    <h3>قلبك الطيب</h3>
-                                    <p>قلبك اللي بيحمل كل الحب والحنان</p>
-                                </div>
-                                <div class="qual-card">
-                                    <span class="qual-ico">✨</span>
-                                    <h3>روحك الجميلة</h3>
-                                    <p>روحك اللي بتنوّر أي مكان بتكوني فيه</p>
-                                </div>
-                                <div class="qual-card">
-                                    <span class="qual-ico">🌙</span>
-                                    <h3>هدوئك</h3>
-                                    <p>سكينتك اللي بتهدّي كل اضطراب</p>
-                                </div>
-                                <div class="qual-card">
-                                    <span class="qual-ico">🌹</span>
-                                    <h3>جمالك</h3>
-                                    <p>جمال ما إله مثيل، من جوّا وبرّا</p>
-                                </div>
-                                <div class="qual-card">
-                                    <span class="qual-ico">💫</span>
-                                    <h3>قوتك</h3>
-                                    <p>قوتك اللي بتلهمني كل يوم</p>
-                                </div>
-                                <div class="qual-card">
-                                    <span class="qual-ico">🤍</span>
-                                    <h3>وفائك</h3>
-                                    <p>وفائك اللي بيخلّيني أغنى إنسان</p>
-                                </div>
+                <div class="page-front page-aura">
+                    <div class="page-frame">
+                        <div class="page-inner">
+                            <div class="page-badge">حضور استثنائي</div>
+                            <h2 class="page-title">لا تشبهين أحداً</h2>
+                            <div class="gold-divider"></div>
+                            
+                            <div class="prose-block">
+                                <p class="highlight-line">الجمال العادي كثير ومنتشر في كل زاوية...</p>
+                                <p>أما أنتِ، فجمالكِ من النوع النادر اللي يفرض احترامه وإعجابه غصب عن الكل.</p>
+                                <p>أناقتك، طريقة كلامك، وهدوءك اللي بيخبي وراه شخصية ذكية وطلّة لا تُقاوم ولا تتكرر.</p>
+                                <p class="lead-text">الصبايا كثيرات يا شادية... بس القطة اللي متلك، ما إلها شبيه ولا بديل بهالدنيا.</p>
+                            </div>
+                            
+                            <div class="feline-quote-box">
+                                <span class="quote-orn">“</span>
+                                <p>الثقة عندما تجتمع مع ملامحكِ الفاتنة، تصنع سحراً لا يملك أحد أمامه إلا الإعجاب.</p>
+                            </div>
+                            
+                            <div class="author-sign">
+                                <span>— قيس الجازي</span>
                             </div>
                         </div>
                     </div>
@@ -177,35 +200,47 @@
                 </div>
             </div>
 
-            <!-- PAGE 5: PROMISES -->
+            <!-- PAGE 5: THE RULES OF ATTRACTION -->
             <div class="page" id="page-5">
-                <div class="page-front">
-                    <div class="prom-page">
-                        <div class="prom-inner">
-                            <h2 class="prom-title">وعود من قيس الجازي<br>إلى شادية</h2>
-                            <div class="prom-list">
-                                <div class="prom-item">
-                                    <span class="prom-heart">♥</span>
-                                    <p>أوعدك إني أضلّ أحبك بكل يوم أكثر من اللي قبله</p>
+                <div class="page-front page-rules">
+                    <div class="page-frame">
+                        <div class="page-inner">
+                            <div class="page-badge">علامات التميّز</div>
+                            <h2 class="page-title">لماذا لا تُقاوم شادية؟</h2>
+                            <div class="gold-divider"></div>
+                            
+                            <div class="rules-list">
+                                <div class="rule-item">
+                                    <span class="rule-num">١</span>
+                                    <div class="rule-text">
+                                        <h4>هيبة الحضور</h4>
+                                        <p>حتى في صمتك وهدوءك، لكِ هيبة بتخلّي الكل يلاحظ وجودك فوراً.</p>
+                                    </div>
                                 </div>
-                                <div class="prom-item">
-                                    <span class="prom-heart">♥</span>
-                                    <p>أوعدك إني أكون سندك بكل لحظة صعبة</p>
+                                <div class="rule-item">
+                                    <span class="rule-num">٢</span>
+                                    <div class="rule-text">
+                                        <h4>ذكاء وغموض</h4>
+                                        <p>بتعرفي متى تتكلمي ومتى تبتسمي، وجاذبيتك كلها بهالغموض الراقي.</p>
+                                    </div>
                                 </div>
-                                <div class="prom-item">
-                                    <span class="prom-heart">♥</span>
-                                    <p>أوعدك إني أرسم ابتسامة على وجهك كل صباح</p>
+                                <div class="rule-item">
+                                    <span class="rule-num">٣</span>
+                                    <div class="rule-text">
+                                        <h4>أنوثة نادرة</h4>
+                                        <p>جمال متقن في كل تفصيلة، أنيق، خالي من أي مبالغة أو تصنّع.</p>
+                                    </div>
                                 </div>
-                                <div class="prom-item">
-                                    <span class="prom-heart">♥</span>
-                                    <p>أوعدك إن حكايتنا رح تضل أجمل حكاية بالدنيا</p>
-                                </div>
-                                <div class="prom-item">
-                                    <span class="prom-heart">♥</span>
-                                    <p>أوعدك إني ما رح أتوقف عن محاولة أخلّيكِ سعيدة</p>
+                                <div class="rule-item">
+                                    <span class="rule-num">٤</span>
+                                    <div class="rule-text">
+                                        <h4>سِحر العيون</h4>
+                                        <p>عيون قطة ذكية وحادة، بتفهم كل إشارة، وبتفرض حدودها بكل دلال.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="prom-sig">بتوقيع القلب — قيس الجازي ❤️</p>
+                            
+                            <p class="rules-footer">بكل تقدير وإعجاب بالجمال النادر — <strong>قيس الجازي</strong></p>
                         </div>
                     </div>
                 </div>
@@ -214,49 +249,59 @@
                 </div>
             </div>
 
-            <!-- PAGE 6: FINAL -->
+            <!-- PAGE 6: FINALE & SIGNATURE -->
             <div class="page" id="page-6">
-                <div class="page-front">
-                    <div class="final-page">
-                        <img src="images/rose.jpg" alt="" class="final-bg-img">
-                        <div class="final-overlay"></div>
-                        <div class="final-inner">
-                            <div class="final-text">
-                                <p>وإذا وصلتي لآخر صفحة، تذكّري إن الكتاب إله نهاية...</p>
-                                <p>بس الحكاية اللي بقلبي إلك ما إلها آخر.</p>
-                                <div class="final-sep"></div>
-                                <p>كل صفحة كانت كلمة، وكل كلمة كانت شعور،</p>
-                                <p>وكل شعور كان إلك إنتِ يا شادية.</p>
-                                <div class="final-sep"></div>
-                                <p class="final-bold">بحبك، واليوم وبكرا وكل الأيام الجايّة.</p>
+                <div class="page-front page-finale">
+                    <div class="page-frame">
+                        <div class="page-inner finale-inner">
+                            <div class="finale-crest">🐾 ✨ 👑</div>
+                            <div class="page-badge">مسك الختام</div>
+                            <h2 class="page-title">اعترافٌ بحسنكِ</h2>
+                            <div class="gold-divider"></div>
+                            
+                            <div class="prose-block finale-prose">
+                                <p>هذا الكتاب مش كلام تقليدي ولا مجاملات عابرة...</p>
+                                <p>هذا مجرد إشادة صريحة ومستحقة بحسنكِ، ودلالكِ، وسحركِ الفتّان.</p>
+                                <p>لأن الجمال الاستثنائي يستاهل يُوثّق بأجمل الكلمات ويُشاد به بأرقى أسلوب.</p>
+                                <p class="finale-highlight">خلّيكي دايماً واثقة، متألقة، ومغرورة بحسنك يا شادية...</p>
+                                <p class="finale-bold">لأن القطة الفاتنة ما بيليق فيها إلا تكون بالقمة.</p>
                             </div>
-                            <div class="final-signature">
-                                <span class="sig-dash">—</span>
-                                <span class="sig-name">قيس الجازي</span>
-                                <span class="sig-heart">❤️</span>
+                            
+                            <div class="final-signature-card">
+                                <span class="sig-title">توقيع الإعجاب والتقدير</span>
+                                <h3 class="sig-name">قيس الجازي</h3>
+                                <div class="sig-stars">✦ ✦ ✦</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="page-back">
                     <div class="page-texture back-cover">
-                        <p class="back-msg">نهاية الكتاب... لكن ليست نهاية الحكاية 💕</p>
+                        <div class="back-cover-inner">
+                            <span class="back-icon">🐾</span>
+                            <p class="back-msg">انتهت صفحات الكتاب... وبقي سِحر القطة الفاتنة مستمراً ✨</p>
+                            <span class="back-author">قيس الجازي</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div><!-- /book -->
 
-        <!-- Navigation arrows -->
-        <button class="nav-arrow nav-next" id="navNext" aria-label="الصفحة التالية">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button class="nav-arrow nav-prev" id="navPrev" aria-label="الصفحة السابقة">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-
-        <!-- Page dots -->
-        <div class="page-dots" id="pageDots"></div>
+        <!-- Bottom Navigation Bar -->
+        <div class="book-nav-bar">
+            <button class="nav-btn nav-prev" id="navPrev" aria-label="الصفحة السابقة">
+                <span>السابق</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            
+            <div class="page-dots" id="pageDots"></div>
+            
+            <button class="nav-btn nav-next" id="navNext" aria-label="الصفحة التالية">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                <span>التالي</span>
+            </button>
+        </div>
     </div>
 
     <script src="script.js"></script>
